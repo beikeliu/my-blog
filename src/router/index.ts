@@ -1,15 +1,23 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(),
   routes: [
     {
       path: "/",
+      redirect: { path: "/login" },
+    },
+    {
+      path: "/post-list",
       component: () => import("@/views/PostList.vue"),
     },
     {
       path: "/create-post",
       component: () => import("@/views/CreatePost.vue"),
+    },
+    {
+      path: "/login",
+      component: () => import("@/views/LoginPage.vue"),
     },
   ],
 });

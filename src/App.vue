@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterView } from "vue-router";
+import "ant-design-vue/es/message/style/css";
 </script>
 
 <template>
